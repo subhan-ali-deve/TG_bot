@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.6-3",
+    "lastTouchedAt": "2026-03-02T09:23:37.382Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-02T09:23:37.371Z",
+    "lastRunVersion": "2026.2.6-3",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "openai-codex:default": {
+        "provider": "openai-codex",
+        "mode": "oauth"
+      },
+      "google:default": {
+        "provider": "google",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai-codex/gpt-5.2-codex"
+      },
+      "models": {
+        "openai-codex/gpt-5.1-codex-mini": {},
+        "google/gemini-2.5-flash": {},
+        "openai-codex/gpt-5.3-codex": {},
+        "openai-codex/gpt-5.2-codex": {}
+      },
+      "workspace": "C:\\Users\\Subhan Ali\\.openclaw\\workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "allowlist",
+      "botToken": "8151565387:AAETuIb4bvZrSttn24GFsWlWudHVwaZjDuI",
+      "allowFrom": [
+        "8537036186"
+      ],
+      "groupPolicy": "allowlist",
+      "streamMode": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "7e127df48f77b05aaaa6411d6bdac73cf918cc8b5253aa56"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "http": {
+      "endpoints": {
+        "chatCompletions": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "discord": {
+        "enabled": true
+      },
+      "telegram": {
+        "enabled": true
+      }
+    }
+  }
+}
